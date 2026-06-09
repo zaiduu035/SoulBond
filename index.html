@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+  <nav class="has-branding main-navigation nav-align-right has-menu-bar-items sub-menu-right" id="site-navigation"
+    aria-label="Primary" itemtype="https://schema.org/SiteNavigationElement" itemscope="">
+    <div class="inside-navigation grid-container">
+      <div class="navigation-branding">
+        <div class="site-logo">
+          <a href="#" title="Soul Bonding" rel="home">
+            <img class="header-image is-logo-image" alt="Love Favour" src="colorBgLogo.png" title="Love Favour"
+              width="150" height="90">
+          </a>
+        </div>
+      </div>
+
+      <button class="menu-toggle" id="menuToggleBtn" aria-controls="primary-menu" aria-expanded="false">
+        <span class="gp-icon icon-menu-bars">
+          <svg class="icon-open" viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em"
+            height="1em">
+            <path
+              d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z">
+            </path>
+          </svg>
+          <svg class="icon-close" viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            width="1em" height="1em" style="display:none;">
+            <path
+              d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z">
+            </path>
+          </svg>
+        </span>
+        <span class="mobile-menu">Menu</span>
+      </button>
+
+      <div id="primary-menu" class="main-nav">
+        <ul id="menu-primary-marketer" class="menu sf-menu">
+          <li class="menu-item current-menu-item menu-item-home">
+            <a href="#" aria-current="page">Home</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Relationship Advice</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Breakup and Healing</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Dating Tips</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu-bar-items">
+        <span class="menu-bar-item">
+          <a href="#" id="searchToggleBtn" role="button" aria-label="Open search" aria-expanded="false">
+            <span class="gp-icon icon-search">
+              <svg class="icon-search-open" viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                width="1em" height="1em">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z">
+                </path>
+              </svg>
+              <svg class="icon-search-close" viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                width="1em" height="1em" style="display:none;">
+                <path
+                  d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z">
+                </path>
+              </svg>
+            </span>
+          </a>
+        </span>
+      </div>
+    </div>
+
+    
+    <div id="searchBar" class="search-bar-wrapper" style="display:none;" aria-hidden="true">
+      <div class="search-bar-inner">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search articles, tips, quizzes…"
+          autocomplete="off" />
+        <button class="search-submit" aria-label="Submit search">
+          <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+            <path fill-rule="evenodd"
+              d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z">
+            </path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+ 
+  <main class="site-main">
+    <section class="hero-section">
+      <div class="hero-hearts" aria-hidden="true">
+        <span class="h1">💖</span><span class="h2">💕</span><span class="h3">💗</span>
+        <span class="h4">❤️</span><span class="h5">💞</span><span class="h6">💝</span>
+      </div>
+
+      <div class="calc-container">
+        <div class="calc-card">
+
+          <div class="calc-header">
+            <span class="calc-emoji" aria-hidden="true">💘</span>
+            <h1 class="calc-title">Love Compatibility Test</h1>
+            <p class="calc-subtitle">Find out how strong your connection really is ✨</p>
+          </div>
+
+          <div class="calc-body">
+            <div class="input-group-love">
+              <label for="yourName" class="love-label">
+                <span class="label-icon" aria-hidden="true">🧑</span> Your Name
+              </label>
+              <input type="text" id="yourName" class="love-input" placeholder="Enter your name…"
+                autocomplete="given-name" maxlength="40" />
+            </div>
+
+            <div class="heart-divider" aria-hidden="true">
+              <span class="divider-line"></span>
+              <span class="divider-heart">♥</span>
+              <span class="divider-line"></span>
+            </div>
+
+            <div class="input-group-love">
+              <label for="crushName" class="love-label">
+                <span class="label-icon" aria-hidden="true">🥰</span> Your Crush's Name
+              </label>
+              <input type="text" id="crushName" class="love-input" placeholder="Enter their name…" autocomplete="off"
+                maxlength="40" />
+            </div>
+          </div>
+
+          <div class="calc-footer">
+            <button id="calculateBtn" class="calculate-btn" type="button">
+              <span class="btn-icon" aria-hidden="true">💖</span>
+              Calculate Love
+              <span class="btn-arrow" aria-hidden="true">→</span>
+            </button>
+          </div>
+
+      
+          <div id="resultBox" class="result-box" style="display:none;" aria-live="polite">
+            <div class="result-percent" id="resultPercent">0%</div>
+            <div class="result-bar-track">
+              <div class="result-bar-fill" id="resultBarFill"></div>
+            </div>
+            <p class="result-message" id="resultMessage"></p>
+            <button class="retry-btn" id="retryBtn" type="button">Try Again 🔄</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+  
+
+  <section class="about-section">
+    <div>
+      <div class="about">
+        <h2>Love Calculator: Discover Your Romantic Compatibility in Seconds</h2>
+        <p>Love is one of the most beautiful feelings in the world, and sometimes, curiosity makes us wonder — how
+          compatible are we with the one we love? That's where our Love Calculator comes in. It's a fun, interactive way
+          to check your love compatibility and add a spark of romance to your day.</p>
+
+        <p>Whether you're in the USA, Canada, Australia, or India, this free tool makes it easy to explore the chemistry
+          between you and your partner. Simple, playful, and heartwarming — it's the perfect way to bring a smile to
+          your
+          face.</p>
+
+        <hr>
+
+        <h3>
+          <img draggable="false" role="img" src="heart.svj.svg" alt="❤️" height="25px">
+          What Is the Love Calculator?
+        </h3>
+
+        <p>The Love Calculator is an engaging online tool that calculates the compatibility between two people based on
+          their names. Just enter your name, type your partner's name, and hit "Calculate Love."</p>
+
+        <p>Once you click the button, a cute progress bar appears, building excitement as it reveals your final love
+          score. After the short wait, your love percentage appears on screen, along with a sweet message such as
+          "You two are a perfect match 💖" or "A lovely connection is in the air 💕."</p>
+
+        <p>It's not just about numbers — it's a lighthearted way to celebrate love, connection, and fun moments with the
+          person who means the most to you.</p>
+
+        <hr>
+
+        <h3>
+          <img src="2nd.svg" alt="💞" width="25px">
+          Why You'll Love It
+        </h3>
+
+        <p>Our Love Calculator is designed to be simple, romantic, and enjoyable for everyone. There's no need to sign
+          up
+          or register — just enter two names and see the magic unfold. The bright colors, floating hearts, and fun
+          messages make it feel special every time you use it.</p>
+
+        <p>Love is a universal language, and this tool is made for people everywhere, whether you're in a long-distance
+          relationship, a new romance, or simply curious about your crush. It's a small way to add joy to your day and
+          share that happiness with others.</p>
+
+        <hr>
+
+        <h3>
+          <img src="3rd.svg" alt="💕" width="25px">
+          How It Works
+        </h3>
+
+        <p>Using the Love Calculator is quick and effortless:</p>
+
+        <ol>
+          <li>Visit the Love Calculator page on LoveFavour.com.</li>
+          <li>Enter your name and your partner's name.</li>
+          <li>Click "Calculate Love."</li>
+          <li>Watch the progress bar as it measures your romantic energy.</li>
+          <li>View your final love percentage with a fun and heartfelt message.</li>
+        </ol>
+
+        <p>That's it — no logins, no forms, just pure romantic fun in seconds.</p>
+
+        <hr>
+
+        <h3>
+          <img src="4th.svg" alt="🌹" width="25px">
+          A Fun Way to Connect
+        </h3>
+
+        <p>In a world filled with busy schedules and daily stress, it's nice to pause and celebrate something as simple
+          and beautiful as love. The Love Calculator gives couples, friends, and even curious singles a chance to enjoy
+          a
+          light moment together.</p>
+
+        <p>Whether you share your results with your partner or post them on social media, it's a fun way to express
+          feelings and connect with the people who make your heart happy.</p>
+
+        <hr>
+
+        <h3>
+          <img src="5th.svg" alt="💖" width="25px">
+          Try It Now
+        </h3>
+
+        <p>Ready to find out how strong your love connection really is? Head over to LoveFavour.com's Love Calculator,
+          enter your names, and let the fun begin!</p>
+
+        <p>It's romantic, cheerful, and made to bring smiles — because love should always be a little magical.</p>
+
+        <p><em><strong>Important Disclaimer</strong></em></p>
+      </div>
+
+      <p>We want to be crystal clear: The Love Calculator is created for fun. The percentages it generates are based on
+        a
+        fictional algorithm and hold no real-world significance regarding romantic compatibility. Please enjoy it as a
+        lighthearted game and nothing more.</p>
+    </div>
+  </section>
+
+
+  
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+
+     
+      <div class="footer-grid">
+
+     
+        <div class="footer-col footer-brand">
+          <div class="footer-logo">
+            💖 <span>Love Favour</span>
+          </div>
+          <p>A fun, free platform celebrating love, connection, and romance. Explore compatibility, relationship tips,
+            and
+            heartfelt quizzes — because love should always feel a little magical.</p>
+        </div>
+
+     
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <span class="contact-icon">📧</span>
+              <span>
+                <a href="mailto:yourname@gmail.com">zaidahmad7820@gmail.com</a>
+              </span>
+            </li>
+            <li>
+              <span class="contact-icon">📸</span>
+              <span>
+                <a href="https://instagram.com/zaiduu___035" target="_blank" rel="noopener noreferrer">
+                  @zaiduu___035
+                </a>
+              </span>
+            </li>
+            <li>
+              <span class="contact-icon">📍</span>
+              <span>India 🇮🇳</span>
+            </li>
+            <li>
+              <span class="contact-icon">⏰</span>
+              <span>Response within 24–48 hours</span>
+            </li>
+          </ul>
+        </div>
+
+        
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links-list">
+            <li><a href="#">Love Calculator</a></li>
+            <li><a href="#">Relationship Advice</a></li>
+            <li><a href="#">Breakup &amp; Healing</a></li>
+            <li><a href="#">Dating Tips</a></li>
+            <li><a href="#">Zodiac Compatibility</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+      
+     
+      <div class="footer-disclaimer">
+        <strong>⚠️ Disclaimer:</strong> The Love Calculator and all compatibility tools on LoveFavour.com are created
+        purely for entertainment purposes. All percentages and results are generated by a fictional algorithm and have
+        absolutely no scientific basis or real-world significance regarding romantic compatibility. Please enjoy them as
+        lighthearted fun and nothing more. LoveFavour.com is not responsible for any decisions made based on these
+        results.
+      </div>
+
+      
+      <div class="footer-bottom">
+        <p>© <span id="footerYear"></span> Love Favour. Made with <span class="footer-heart">♥</span> for everyone in
+          love.</p>
+        <p>
+          <a href="#">Privacy Policy</a> &nbsp;·&nbsp;
+          <a href="#">Terms of Use</a> &nbsp;·&nbsp;
+          <a href="#">Contact</a>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+ 
+  
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+  <script src="mainScript.js"></script>
+
+</body>
+
+</html>
