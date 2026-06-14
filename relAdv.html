@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relationship Advice – Love Favour</title>
+    <meta name="description"
+        content="Explore heartfelt relationship advice on communication, trust, love languages and more. Thoughtful tips to help your relationship bloom.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="main.css">
+
+    <link rel="stylesheet" href="relAdv.css">
+</head>
+
+<body>
+
+
+    <nav class="has-branding main-navigation nav-align-right has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Primary" itemtype="https://schema.org/SiteNavigationElement" itemscope="">
+        <div class="inside-navigation grid-container">
+            <div class="navigation-branding">
+                <div class="site-logo">
+                    <a href="index.html" title="Soul Bonding" rel="home">
+                        <img class="header-image is-logo-image" alt="Love Favour" src="colorBgLogo.png"
+                            title="Love Favour" width="150" height="90">
+                    </a>
+                </div>
+            </div>
+
+            <button class="menu-toggle" id="menuToggleBtn" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars">
+                    <svg class="icon-open" viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z">
+                        </path>
+                    </svg>
+                    <svg class="icon-close" viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em" style="display:none;">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z">
+                        </path>
+                    </svg>
+                </span>
+                <span class="mobile-menu">Menu</span>
+            </button>
+
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-primary-marketer" class="menu sf-menu">
+                    <li class="menu-item menu-item-home">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="menu-item current-menu-item">
+                        <a href="relAdv.html" aria-current="page">Relationship Advice</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">Breakup and Healing</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">Dating Tips</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-bar-items">
+                <span class="menu-bar-item">
+                    <a href="#" id="searchToggleBtn" role="button" aria-label="Open search" aria-expanded="false">
+                        <span class="gp-icon icon-search">
+                            <svg class="icon-search-open" viewBox="0 0 512 512" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z">
+                                </path>
+                            </svg>
+                            <svg class="icon-search-close" viewBox="0 0 512 512" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" style="display:none;">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z">
+                                </path>
+                            </svg>
+                        </span>
+                    </a>
+                </span>
+            </div>
+        </div>
+
+        <div id="searchBar" class="search-bar-wrapper" style="display:none;" aria-hidden="true">
+            <div class="search-bar-inner">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search relationship tips…"
+                    autocomplete="off" />
+                <button class="search-submit" aria-label="Submit search">
+                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+                        <path fill-rule="evenodd"
+                            d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <section class="advice-hero" id="advice-hero">
+        <div class="advice-hero-bg" aria-hidden="true"></div>
+        <div class="advice-hero-overlay" aria-hidden="true"></div>
+        <div class="hero-petals" aria-hidden="true">
+            <span class="p1">🌸</span>
+            <span class="p2">🌹</span>
+            <span class="p3">💮</span>
+            <span class="p4">🌸</span>
+            <span class="p5">🌺</span>
+            <span class="p6">💐</span>
+        </div>
+        <div class="advice-hero-content">
+            <div class="advice-hero-badge">🌹 Love &amp; Relationships</div>
+            <h1>Nurture Love with <em>Heartfelt Advice</em></h1>
+            <p class="advice-hero-sub">
+                Real relationships take real effort. Discover thoughtful guidance on communication, trust,
+                intimacy, and growing together — so every moment becomes more meaningful.
+            </p>
+            <span class="advice-hero-scroll"
+                onclick="document.getElementById('advice-cards').scrollIntoView({behavior:'smooth'})">
+                Explore Advice &nbsp; ↓
+            </span>
+        </div>
+    </section>
+
+
+    <!-- Advise card section -->
+    <section class="advice-section" id="advice-cards">
+        <div class="advice-section-inner">
+
+            <div class="advice-section-head">
+                <span class="section-tag">💖 Expert Guidance</span>
+                <h2>Six Pillars of a Thriving Relationship</h2>
+                <p>Small, consistent acts of love build extraordinary bonds. Explore each pillar below.</p>
+            </div>
+
+            <div class="advice-grid">
+
+                <!-- Card 1 -->
+                <article class="advice-card" id="advice-card-1">
+                    <div class="advice-card-icon" aria-hidden="true">💬</div>
+                    <div class="advice-card-tag">Communication</div>
+                    <h3>The Art of Deep Listening</h3>
+                    <p>Great relationships are built on two-way conversations where both partners truly feel heard.
+                        Put down your phone, make eye contact, and listen not just to reply — but to understand.
+                        Validate your partner's emotions even when you see things differently.</p>
+                    <div class="advice-card-tip">
+                        <span class="tip-icon">💡</span>
+                        <span>Try the "3-second pause" — wait 3 seconds before responding to allow space for genuine
+                            reflection.</span>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="advice-card" id="advice-card-2">
+                    <div class="advice-card-icon" aria-hidden="true">🤝</div>
+                    <div class="advice-card-tag">Trust</div>
+                    <h3>The Power of Unwavering Trust</h3>
+                    <p>Trust is the oxygen of every lasting relationship — invisible, yet essential. Build it through
+                        consistent honesty, keeping promises no matter how small, and showing up for your partner
+                        especially when it's inconvenient. Once broken, it takes time and patience to rebuild.</p>
+                    <div class="advice-card-tip">
+                        <span class="tip-icon">💡</span>
+                        <span>Share something vulnerable this week. Openness invites openness in return.</span>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="advice-card" id="advice-card-3">
+                    <div class="advice-card-icon" aria-hidden="true">🌸</div>
+                    <div class="advice-card-tag">Affection</div>
+                    <h3>Small Acts of Love Matter Most</h3>
+                    <p>Grand gestures grab headlines, but lasting love is built from the quiet "I thought of you"
+                        moments — a handwritten note, making their favourite tea, a spontaneous hug. These micro-acts
+                        of care are the true currency of deep, enduring connection.</p>
+                    <div class="advice-card-tip">
+                        <span class="tip-icon">💡</span>
+                        <span>Leave one surprise note for your partner this week — watch how it shifts the whole
+                            mood.</span>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="advice-card" id="advice-card-4">
+                    <div class="advice-card-icon" aria-hidden="true">🌱</div>
+                    <div class="advice-card-tag">Growth</div>
+                    <h3>Grow Together, Yet Stay Yourself</h3>
+                    <p>A healthy relationship does not swallow individuality — it celebrates it. Pursue your own
+                        passions, maintain your own friendships, and keep evolving as a person. Two whole individuals
+                        who choose each other every day create a far stronger bond than dependency ever could.</p>
+                    <div class="advice-card-tip">
+                        <span class="tip-icon">💡</span>
+                        <span>Schedule one "solo" activity each week. Returning with stories to share keeps love
+                            exciting.</span>
+                    </div>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="advice-card" id="advice-card-5">
+                    <div class="advice-card-icon" aria-hidden="true">⚡</div>
+                    <div class="advice-card-tag">Conflict</div>
+                    <h3>Conflict as a Path to Connection</h3>
+                    <p>Disagreements are inevitable; it's how you handle them that defines your relationship.
+                        Choose curiosity over criticism. Fight the problem, not each other. Repair quickly, forgive
+                        completely, and remember: you are a team even when emotions run high.</p>
+                    <div class="advice-card-tip">
+                        <span class="tip-icon">💡</span>
+                        <span>Start sentences with "I feel…" instead of "You always…" — it changes the entire
+                            conversation.</span>
+                    </div>
+                </article>
+
+                <!-- Card 6 -->
+                <article class="advice-card" id="advice-card-6">
+                    <div class="advice-card-icon" aria-hidden="true">⏳</div>
+                    <div class="advice-card-tag">Presence</div>
+                    <h3>Sacred Time: The Gift of Being Present</h3>
+                    <p>In a world of endless notifications, giving your undivided attention is one of the most loving
+                        things you can do. Schedule regular "device-free" time together — even thirty minutes of
+                        genuine presence can deepen your bond more than hours of distracted togetherness.</p>
+                    <div class="advice-card-tip">
+                        <span class="tip-icon">💡</span>
+                        <span>Institute a weekly "phone basket" dinner where both phones go away for the whole
+                            meal.</span>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- QUOTE BANNER -->
+    <section class="quote-banner" aria-label="Love quote">
+        <div class="quote-banner-inner">
+            <span class="quote-mark" aria-hidden="true"></span>
+            <blockquote>' The best thing to hold onto in life is each other.'</blockquote>
+            <p class="quote-author">— Audrey Hepburn</p>
+        </div>
+    </section>
+
+
+    <!-- QUICK TIPS -->
+    <section class="tips-strip" id="quick-tips">
+        <div class="tips-strip-inner">
+            <div class="tips-strip-head">
+                <h2>🌹 10 Quick Tips for Every Couple</h2>
+                <p>Simple habits that keep love alive, warm, and growing every single day.</p>
+            </div>
+
+            <ul class="tips-list">
+                <li class="tip-item" id="tip-1">
+                    <div class="tip-num">1</div>
+                    <div class="tip-item-text">
+                        <strong>Say "I love you" with meaning</strong>
+                        <span>Don't just say it — follow it with a specific reason so your partner truly feels
+                            it.</span>
+                    </div>
+                </li>
+                <li class="tip-item" id="tip-2">
+                    <div class="tip-num">2</div>
+                    <div class="tip-item-text">
+                        <strong>Celebrate small wins together</strong>
+                        <span>Cheer each other's progress at work, hobbies, or personal goals — be each other's
+                            loudest fans.</span>
+                    </div>
+                </li>
+                <li class="tip-item" id="tip-3">
+                    <div class="tip-num">3</div>
+                    <div class="tip-item-text">
+                        <strong>Never stop dating each other</strong>
+                        <span>Plan regular date nights, even at home. Novelty and fun keep the spark alive.</span>
+                    </div>
+                </li>
+                <li class="tip-item" id="tip-4">
+                    <div class="tip-num">4</div>
+                    <div class="tip-item-text">
+                        <strong>Apologise fully and quickly</strong>
+                        <span>Don't let pride linger. A sincere, prompt apology heals far faster than silence.</span>
+                    </div>
+                </li>
+                <li class="tip-item" id="tip-5">
+                    <div class="tip-num">5</div>
+                    <div class="tip-item-text">
+                        <strong>Learn their love language</strong>
+                        <span>Words of affirmation, acts of service, quality time, touch, or gifts — love differently
+                            for them.</span>
+                    </div>
+                </li>
+                <li class="tip-item" id="tip-6">
+                    <div class="tip-num">6</div>
+                    <div class="tip-item-text">
+                        <strong>Show up during hard times</strong>
+                        <span>Being present when life is difficult matters far more than being there only during easy
+                            moments.</span>
+                    </div>
+                </li>
+                <li class="tip-item" id="tip-7">
+                    <div class="tip-num">7</div>
+                    <div class="tip-item-text">
+                        <strong>Keep physical affection alive</strong>
+                        <span>A warm hug, holding hands, or a gentle touch goes a long way in maintaining
+                            closeness.</span>
+                    </div>
+                </li>
+                <li class="tip-item" id="tip-8">
+                    <div class="tip-num">8</div>
+                    <div class="tip-item-text">
+                        <strong>Share your dreams openly</strong>
+                        <span>Talk about where you want to be in 5 years. Align your visions and build a future
+                            together.</span>
+                    </div>
+                </li>
+                <li class="tip-item" id="tip-9">
+                    <div class="tip-num">9</div>
+                    <div class="tip-item-text">
+                        <strong>Respect each other's space</strong>
+                        <span>Healthy alone time recharges both of you. Trust each other enough to be apart
+                            sometimes.</span>
+                    </div>
+                </li>
+                <li class="tip-item" id="tip-10">
+                    <div class="tip-num">10</div>
+                    <div class="tip-item-text">
+                        <strong>Choose love over being right</strong>
+                        <span>Ask yourself: do I want to win this argument, or do I want a happy relationship? Choose
+                            wisely.</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-inner">
+
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <div class="footer-logo">💖 <span>Love Favour</span></div>
+                    <p>A fun, free platform celebrating love, connection, and romance. Explore compatibility,
+                        relationship tips, and heartfelt quizzes — because love should always feel a little
+                        magical.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Get in Touch</h4>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <span class="contact-icon">📧</span>
+                            <span><a href="mailto:zaidahmad7820@gmail.com">zaidahmad7820@gmail.com</a></span>
+                        </li>
+                        <li>
+                            <span class="contact-icon">📸</span>
+                            <span><a href="https://instagram.com/zaiduu___035" target="_blank"
+                                    rel="noopener noreferrer">@zaiduu___035</a></span>
+                        </li>
+                        <li>
+                            <span class="contact-icon">📍</span>
+                            <span>India 🇮🇳</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon">⏰</span>
+                            <span>Response within 24–48 hours</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="index.html">Love Calculator</a></li>
+                        <li><a href="relAdv.html">Relationship Advice</a></li>
+                        <li><a href="#">Breakup &amp; Healing</a></li>
+                        <li><a href="#">Dating Tips</a></li>
+                        <li><a href="#">Zodiac Compatibility</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-disclaimer">
+                <strong>⚠️ Disclaimer:</strong> The content on this page is for entertainment and general guidance
+                purposes only. It does not replace professional relationship counselling. LoveFavour.com is not
+                responsible for decisions made based on this content.
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <span id="footerYear"></span> Love Favour. Made with <span class="footer-heart">♥</span> for
+                    everyone in love.</p>
+                <p>
+                    <a href="#">Privacy Policy</a> &nbsp;·&nbsp;
+                    <a href="#">Terms of Use</a> &nbsp;·&nbsp;
+                    <a href="#">Contact</a>
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script>
+        document.getElementById('footerYear').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const menuToggleBtn = document.getElementById('menuToggleBtn');
+        const primaryMenu = document.getElementById('primary-menu');
+        if (menuToggleBtn && primaryMenu) {
+            menuToggleBtn.addEventListener('click', () => {
+                const isOpen = primaryMenu.classList.toggle('open');
+                menuToggleBtn.setAttribute('aria-expanded', isOpen);
+                menuToggleBtn.querySelector('.icon-open').style.display = isOpen ? 'none' : '';
+                menuToggleBtn.querySelector('.icon-close').style.display = isOpen ? '' : 'none';
+            });
+        }
+
+        // Search toggle
+        const searchToggleBtn = document.getElementById('searchToggleBtn');
+        const searchBar = document.getElementById('searchBar');
+        const searchInput = document.getElementById('searchInput');
+        if (searchToggleBtn && searchBar) {
+            searchToggleBtn.addEventListener('click', e => {
+                e.preventDefault();
+                const isVisible = searchBar.style.display !== 'none';
+                searchBar.style.display = isVisible ? 'none' : 'block';
+                searchBar.setAttribute('aria-hidden', isVisible);
+                searchToggleBtn.setAttribute('aria-expanded', !isVisible);
+                const openSvg = searchToggleBtn.querySelector('.icon-search-open');
+                const closeSvg = searchToggleBtn.querySelector('.icon-search-close');
+                if (openSvg) openSvg.style.display = isVisible ? '' : 'none';
+                if (closeSvg) closeSvg.style.display = isVisible ? 'none' : '';
+                if (!isVisible && searchInput) searchInput.focus();
+            });
+        }
+
+        // Sticky nav shadow
+        const nav = document.getElementById('site-navigation');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 10);
+        }, { passive: true });
+    </script>
+
+</body>
+
+</html>

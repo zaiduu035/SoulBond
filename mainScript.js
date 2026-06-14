@@ -74,11 +74,13 @@ const messages = [
 //     hash = (hash * 31 + str.charCodeAt(i)) >>> 0;
 //   }
 //   return (hash % 95) + 5; // always 5–99 for fun range
-// }
+// }   
 //this function is also same but it returns the random numbers for every user and independent of the character.
+
 function calcScore() {
     return Math.floor(Math.random() * 100) + 1;
 }
+
 
 document.getElementById('calculateBtn').addEventListener('click', () => {
     const yourName = document.getElementById('yourName').value.trim();

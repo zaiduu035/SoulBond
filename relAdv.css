@@ -1,0 +1,649 @@
+/* SHARED ANIMATIONS */
+
+@keyframes raFadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes raFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes raBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(7px);
+    }
+}
+
+@keyframes raPetalFall {
+    0% {
+        opacity: 0;
+        top: -6%;
+        transform: translateX(0) rotate(0deg) scale(0.8);
+    }
+
+    10% {
+        opacity: 0.6;
+    }
+
+    90% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 0;
+        top: 112%;
+        transform: translateX(36px) rotate(360deg) scale(1.1);
+    }
+}
+
+@keyframes raCardIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* HERO SECTION */
+
+.advice-hero {
+    position: relative;
+    min-height: 72vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    padding: 6rem 1.5rem 5rem;
+}
+
+/* Background rose photo */
+.advice-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('pink_rose_background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.78) saturate(1.2);
+    transform: scale(1.05);
+    transition: transform 9s ease;
+    z-index: 0;
+}
+
+.advice-hero:hover .advice-hero-bg {
+    transform: scale(1.09);
+}
+
+/* Gradient overlay for legibility */
+.advice-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg,
+            rgba(192, 57, 91, 0.35) 0%,
+            rgba(113, 20, 40, 0.58) 55%,
+            rgba(30, 10, 20, 0.70) 100%);
+    z-index: 1;
+}
+
+/* Text content */
+.advice-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 740px;
+    padding: 0 1rem;
+}
+
+
+.advice-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.26);
+    border-radius: 50px;
+    padding: 7px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #ffe0ea;
+    letter-spacing: 0.06em;
+    margin-bottom: 1.6rem;
+    animation: raFadeInDown 0.7s ease both;
+}
+
+/* Main heading */
+.advice-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 5.5vw, 4rem);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.16;
+    margin-bottom: 1.25rem;
+    text-shadow: 0 4px 28px rgba(80, 10, 30, 0.45);
+    animation: raFadeInUp 0.8s 0.1s ease both;
+}
+
+/* Gradient text in heading */
+.advice-hero h1 em {
+    font-style: normal;
+    background: linear-gradient(130deg, #ffd6e0 20%, var(--love-gold) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Sub-headline paragraph */
+.advice-hero-sub {
+    font-size: 1.07rem;
+    color: rgba(255, 224, 234, 0.90);
+    line-height: 1.8;
+    margin-bottom: 2.2rem;
+    font-weight: 400;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: raFadeInUp 0.8s 0.22s ease both;
+}
+
+/* Scroll cue */
+.advice-hero-scroll {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 13.5px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    user-select: none;
+    animation: raBounce 2.2s 1.6s ease-in-out infinite,
+        raFadeInUp 0.8s 0.4s ease both;
+    transition: color 0.25s ease;
+}
+
+.advice-hero-scroll:hover {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+
+/* FLOATING PETALS */
+
+.hero-petals {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero-petals span {
+    position: absolute;
+    opacity: 0;
+    animation: raPetalFall linear infinite;
+}
+
+.hero-petals .p1 {
+    left: 7%;
+    font-size: 1.1rem;
+    animation-duration: 8s;
+    animation-delay: 0.0s;
+}
+
+.hero-petals .p2 {
+    left: 21%;
+    font-size: 1.6rem;
+    animation-duration: 11s;
+    animation-delay: 2.0s;
+}
+
+.hero-petals .p3 {
+    left: 41%;
+    font-size: 1.3rem;
+    animation-duration: 9s;
+    animation-delay: 0.5s;
+}
+
+.hero-petals .p4 {
+    left: 59%;
+    font-size: 1.0rem;
+    animation-duration: 13s;
+    animation-delay: 1.5s;
+}
+
+.hero-petals .p5 {
+    left: 74%;
+    font-size: 1.8rem;
+    animation-duration: 10s;
+    animation-delay: 3.0s;
+}
+
+.hero-petals .p6 {
+    left: 89%;
+    font-size: 1.2rem;
+    animation-duration: 7s;
+    animation-delay: 4.0s;
+}
+
+
+/*  ADVICE CARDS SECTION */
+
+.advice-section {
+    padding: 5.5rem 1.5rem 6.5rem;
+    background: linear-gradient(180deg, #fff5f7 0%, #fbeaf0 100%);
+}
+
+.advice-section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section heading */
+.advice-section-head {
+    text-align: center;
+    margin-bottom: 3.75rem;
+    animation: raFadeInUp 0.7s ease both;
+}
+
+.advice-section-head .section-tag {
+    display: inline-block;
+    background: var(--love-rose-pale);
+    color: var(--love-rose);
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    border: 1px solid var(--love-border);
+}
+
+.advice-section-head h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.75rem, 3.5vw, 2.6rem);
+    font-weight: 700;
+    color: var(--love-rose-deep);
+    margin-bottom: 0.85rem;
+    line-height: 1.22;
+}
+
+.advice-section-head p {
+    font-size: 15.5px;
+    color: var(--love-muted);
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.82;
+}
+
+/* Cards grid, this devides the cards into three fractional and equal columns  */
+.advice-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem;
+}
+
+
+.advice-card {
+    background: #fff;
+    border: 1px solid rgba(192, 57, 91, 0.12);
+    border-radius: 22px;
+    padding: 2.1rem 1.85rem 1.85rem;
+    box-shadow:
+        0 2px 18px rgba(192, 57, 91, 0.07),
+        0 1px 4px rgba(192, 57, 91, 0.04);
+    position: relative;
+    overflow: hidden;
+
+    opacity: 0;
+    animation: raCardIn 0.65s ease forwards;
+    /* Hower transition */
+    transition:
+        transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 0.28s ease;
+}
+
+.advice-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--love-rose), var(--love-gold));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.38s cubic-bezier(0.22, 1, 0.36, 1);
+    border-radius: 22px 22px 0 0;
+}
+
+
+.advice-card:hover {
+    transform: translateY(-9px);
+    box-shadow:
+        0 18px 52px rgba(192, 57, 91, 0.16),
+        0 4px 14px rgba(192, 57, 91, 0.09);
+    border-color: rgba(192, 57, 91, 0.28);
+}
+
+.advice-card:hover::before {
+    transform: scaleX(1);
+}
+
+
+.advice-card:nth-child(1) {
+    animation-delay: 0.06s;
+}
+
+.advice-card:nth-child(2) {
+    animation-delay: 0.14s;
+}
+
+.advice-card:nth-child(3) {
+    animation-delay: 0.22s;
+}
+
+.advice-card:nth-child(4) {
+    animation-delay: 0.30s;
+}
+
+.advice-card:nth-child(5) {
+    animation-delay: 0.38s;
+}
+
+.advice-card:nth-child(6) {
+    animation-delay: 0.46s;
+}
+
+/* Card icon bubble  */
+.advice-card-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 16px;
+    background: var(--love-rose-pale);
+    border: 1px solid rgba(192, 57, 91, 0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    margin-bottom: 1.3rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.advice-card:hover .advice-card-icon {
+    background: var(--love-rose);
+    transform: scale(1.13) rotate(-6deg);
+}
+
+
+.advice-card-tag {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--love-rose);
+    margin-bottom: 0.45rem;
+}
+
+/* Card title*/
+.advice-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.18rem;
+    font-weight: 700;
+    color: var(--love-rose-deep);
+    margin-bottom: 0.75rem;
+    line-height: 1.35;
+}
+
+/*  Card body text*/
+.advice-card p {
+    font-size: 14.5px;
+    color: var(--love-muted);
+    line-height: 1.88;
+}
+
+/* Tip callout at bottom  */
+.advice-card-tip {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.55rem;
+    margin-top: 1.3rem;
+    padding-top: 1.1rem;
+    border-top: 1px solid var(--love-border);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--love-rose-deep);
+    line-height: 1.6;
+}
+
+.tip-icon {
+    flex-shrink: 0;
+    font-size: 1rem;
+    margin-top: 1px;
+}
+
+
+/* QUOTE BANNER */
+
+.quote-banner {
+    position: relative;
+    padding: 5rem 1.5rem;
+    background-image: url('pink_rose_background.png');
+    background-size: cover;
+    background-position: center 42%;
+    background-attachment: fixed;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+.quote-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(83, 12, 28, 0.76) 0%,
+            rgba(192, 57, 91, 0.52) 100%);
+}
+
+.quote-banner-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+.quote-mark {
+    font-family: 'Playfair Display', serif;
+    font-size: 7rem;
+    line-height: 0.52;
+    color: rgba(255, 255, 255, 0.18);
+    display: block;
+    margin-bottom: 0.75rem;
+    user-select: none;
+}
+
+.quote-banner blockquote {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.3rem, 3.2vw, 1.85rem);
+    color: #fff;
+    font-style: italic;
+    line-height: 1.68;
+    margin-bottom: 1.4rem;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.28);
+}
+
+.quote-author {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255, 224, 234, 0.82);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+
+
+
+
+.tips-strip {
+    padding: 5rem 1.5rem 5.5rem;
+    background: var(--love-rose-pale);
+}
+
+.tips-strip-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+
+.tips-strip-head {
+    text-align: center;
+    margin-bottom: 3.25rem;
+}
+
+.tips-strip-head h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.65rem, 3vw, 2.25rem);
+    font-weight: 700;
+    color: var(--love-rose-deep);
+    margin-bottom: 0.6rem;
+    line-height: 1.25;
+}
+
+.tips-strip-head p {
+    font-size: 15px;
+    color: var(--love-muted);
+    line-height: 1.7;
+}
+
+
+.tips-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.1rem;
+    list-style: none;
+}
+
+
+.tip-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    border-radius: 16px;
+    border: 1px solid var(--love-border);
+    background: var(--love-blush);
+    transition:
+        border-color 0.26s ease,
+        box-shadow 0.26s ease,
+        transform 0.26s ease;
+}
+
+.tip-item:hover {
+    border-color: rgba(192, 57, 91, 0.32);
+    box-shadow: 0 6px 22px rgba(192, 57, 91, 0.10);
+    transform: translateX(5px);
+}
+
+
+.tip-num {
+    flex-shrink: 0;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--love-rose), #e05280);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+    box-shadow: 0 3px 10px rgba(192, 57, 91, 0.28);
+}
+
+
+.tip-item-text strong {
+    display: block;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--love-rose-deep);
+    margin-bottom: 0.22rem;
+}
+
+.tip-item-text span {
+    font-size: 13.5px;
+    color: var(--love-muted);
+    line-height: 1.72;
+}
+
+
+
+
+@media (max-width: 1040px) {
+    .advice-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* this makes the mobile view responsive */
+@media (max-width: 700px) {
+    .advice-hero {
+        min-height: 58vh;
+        padding: 4.5rem 1.2rem 3.5rem;
+    }
+
+    .advice-section {
+        padding: 3.5rem 1.2rem 4rem;
+    }
+
+    .advice-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .tips-list {
+        grid-template-columns: 1fr;
+    }
+
+    /* Disable parallax on mobile — avoids rendering glitches */
+    .quote-banner {
+        background-attachment: scroll;
+        padding: 3.5rem 1.2rem;
+    }
+
+    .tips-strip {
+        padding: 3.5rem 1.2rem 4rem;
+    }
+}
