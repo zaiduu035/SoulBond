@@ -77,7 +77,24 @@ const messages = [
 // }   
 //this function is also same but it returns the random numbers for every user and independent of the character.
 
-function calcScore() {
+function calcScore(yourName, crushName) {
+    const a = yourName.trim().toLowerCase();
+    const b = crushName.trim().toLowerCase();
+
+    if (
+        (a === "zaid" && b === "zeba") ||
+        (a === "zeba" && b === "zaid")
+    ) {
+        return 100;
+    }
+
+    if (
+        (a === "zaid" && b === "naziya") ||
+        (a === "naziya" && b === "zaid")
+    ) {
+        return 0;
+    }
+
     return Math.floor(Math.random() * 100) + 1;
 }
 
