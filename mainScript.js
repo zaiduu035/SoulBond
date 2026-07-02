@@ -1,5 +1,3 @@
-
-/* ── Menu Toggle ── */
 const menuBtn = document.getElementById('menuToggleBtn');
 const mainNav = document.getElementById('primary-menu');
 const iconOpen = menuBtn.querySelector('.icon-open');
@@ -12,7 +10,6 @@ menuBtn.addEventListener('click', () => {
     iconClose.style.display = isOpen ? 'inline' : 'none';
 });
 
-/* Close menu when a link is clicked */
 mainNav.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
         mainNav.classList.remove('open');
@@ -22,7 +19,6 @@ mainNav.querySelectorAll('a').forEach(link => {
     });
 });
 
-/* ── Search Toggle ── */
 const searchBtn = document.getElementById('searchToggleBtn');
 const searchBar = document.getElementById('searchBar');
 const searchInput = document.getElementById('searchInput');
@@ -40,7 +36,7 @@ searchBtn.addEventListener('click', (e) => {
     if (!isOpen) searchInput.focus();
 });
 
-/* Close search on Escape */
+
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && searchBar.style.display === 'block') {
         searchBar.style.display = 'none';
@@ -51,13 +47,13 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-/* ── Sticky nav shadow on scroll ── */
+
 window.addEventListener('scroll', () => {
     document.getElementById('site-navigation')
         .classList.toggle('scrolled', window.scrollY > 10);
 });
 
-/* ── Love Calculator ── */
+
 const messages = [
     { max: 20, text: "Not quite a match… but hey, every love story starts somewhere! 🌱" },
     { max: 40, text: "There's a tiny spark — fan those flames! 🕯️" },
@@ -83,7 +79,11 @@ function calcScore(yourName, crushName) {
 
     if (
         (a === "zaid" && b === "zeba") ||
-        (a === "zeba" && b === "zaid")
+        (a === "zeba" && b === "zaid") ||
+        (a === "zaid ahmad" && b === "zeba fatima") ||
+        (a === "zeba fatima" && b === "zaid ahmad") ||
+        (a === "vaibhav" && b === "nandini") ||
+        (a === "nandini" && b === "vaibhav")
     ) {
         return 100;
     }
@@ -125,11 +125,11 @@ document.getElementById('retryBtn').addEventListener('click', () => {
     document.getElementById('yourName').focus();
 });
 
-/* Allow Enter key to trigger calculation */
+
 ['yourName', 'crushName'].forEach(id => {
     document.getElementById(id).addEventListener('keydown', e => {
         if (e.key === 'Enter') document.getElementById('calculateBtn').click();
     });
 });
 
- document.getElementById('footerYear').textContent = new Date().getFullYear();
+document.getElementById('footerYear').textContent = new Date().getFullYear();

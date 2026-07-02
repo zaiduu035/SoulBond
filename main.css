@@ -35,7 +35,6 @@ body {
   min-height: 100vh;
 }
 
-/* NAVIGATION */
 #site-navigation {
   position: sticky;
   top: 0;
@@ -64,7 +63,6 @@ body {
   gap: 1rem;
 }
 
-/* Logo */
 .navigation-branding {
   flex-shrink: 0;
 }
@@ -86,7 +84,6 @@ body {
   object-fit: contain;
 }
 
-/* Menu toggle */
 .menu-toggle {
   display: none;
   background: none;
@@ -118,7 +115,6 @@ body {
   letter-spacing: 0.03em;
 }
 
-/* Nav links */
 .main-nav {
   flex: 1;
   display: flex;
@@ -180,7 +176,6 @@ body {
   transform: scaleX(1);
 }
 
-/* Search icon */
 .menu-bar-items {
   display: flex;
   align-items: center;
@@ -213,7 +208,6 @@ body {
   fill: currentColor;
 }
 
-/* Search bar */
 .search-bar-wrapper {
   border-top: 1px solid var(--love-border);
   background: rgba(255, 245, 247, 0.97);
@@ -281,7 +275,6 @@ body {
   fill: #fff;
 }
 
-/*  HERO + CALCULATOR*/
 .site-main {
   position: relative;
   z-index: 1;
@@ -297,7 +290,6 @@ body {
   overflow: hidden;
 }
 
-/* Floating decorative hearts */
 .hero-hearts {
   position: absolute;
   inset: 0;
@@ -376,7 +368,6 @@ body {
   }
 }
 
-/* Calculator card */
 .calc-container {
   width: 100%;
   max-width: 480px;
@@ -399,7 +390,6 @@ body {
   box-shadow: 0 8px 40px rgba(192, 57, 91, 0.16), 0 2px 8px rgba(192, 57, 91, 0.08);
 }
 
-/* Card header */
 .calc-header {
   background: linear-gradient(135deg, #fbeaf0 0%, #fff0f6 100%);
   border-bottom: 1px solid rgba(192, 57, 91, 0.1);
@@ -445,7 +435,6 @@ body {
   font-weight: 400;
 }
 
-/* Card body */
 .calc-body {
   padding: 2rem;
   display: flex;
@@ -495,7 +484,6 @@ body {
   transform: translateY(-1px);
 }
 
-/* Heart divider */
 .heart-divider {
   display: flex;
   align-items: center;
@@ -515,7 +503,6 @@ body {
   animation: heartPulse 1.6s ease-in-out infinite;
 }
 
-/* Card footer (button) */
 .calc-footer {
   padding: 0 2rem 2rem;
 }
@@ -563,7 +550,6 @@ body {
   transform: translateX(4px);
 }
 
-/* Result box */
 .result-box {
   margin: 0 2rem 2rem;
   background: var(--love-rose-pale);
@@ -715,7 +701,6 @@ body {
   padding: 4rem 1.5rem 5rem;
 }
 
-/* Outer wrapper div */
 .about-section>div {
   background: #fff;
   border: 1px solid var(--love-border);
@@ -737,7 +722,6 @@ body {
   }
 }
 
-/*  Main H2 title  */
 .about h2 {
   font-family: 'Playfair Display', serif;
   font-size: 1.9rem;
@@ -771,7 +755,6 @@ body {
   }
 }
 
-/* ---- H3 sub-headings ---- */
 .about h3 {
   font-family: 'Playfair Display', serif;
   font-size: 1.2rem;
@@ -793,7 +776,6 @@ body {
   transform: scale(1.2) rotate(-8deg);
 }
 
-/* ---- Paragraphs ---- */
 .about p {
   font-size: 15px;
   color: var(--love-muted);
@@ -805,7 +787,6 @@ body {
   margin-bottom: 0;
 }
 
-/* ---- Ordered list ---- */
 .about ol {
   padding-left: 1.4rem;
   margin-bottom: 1rem;
@@ -833,7 +814,6 @@ body {
   transform: translateX(4px);
 }
 
-/* ---- Dividers ---- */
 .about hr {
   border: none;
   height: 1px;
@@ -841,7 +821,6 @@ body {
   margin: 1.75rem 0;
 }
 
-/* Disclaimer block  */
 .about-section>div>p {
   background: var(--love-rose-pale);
   border-left: 4px solid var(--love-rose);
@@ -859,9 +838,6 @@ body {
   color: var(--love-rose-deep);
   font-style: normal;
 }
-
-
-
 
 .about>* {
   animation: fadeInUp 0.55s ease both;
@@ -907,16 +883,12 @@ body {
   animation-delay: 0.50s;
 }
 
-
-
-
 .site-footer {
   background: linear-gradient(160deg, #1a0810 0%, #2c1520 60%, #3d1028 100%);
   color: #e8cdd5;
   position: relative;
   overflow: hidden;
 }
-
 
 .site-footer::before {
   content: '';
@@ -1006,7 +978,7 @@ body {
   border-radius: 2px;
 }
 
-/* Contact list */
+
 .footer-contact-list {
   list-style: none;
   display: flex;
